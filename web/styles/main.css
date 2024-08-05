@@ -1,0 +1,296 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  overflow: hidden;
+}
+
+.toolbar {
+  width: 100vw;
+  height: 30px;
+  background-color: #181818;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgb(37, 37, 37);
+}
+.toolbar button {
+  width: 70px;
+  height: 100%;
+  margin-left: 10px;
+  background: transparent;
+  color: white;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+.toolbar button:hover {
+  background-color: #333;
+}
+
+.tools {
+  width: 100vw;
+  height: 30px;
+  background-color: #0c0c0c;
+  border-bottom: 1px solid rgb(37, 37, 37);
+}
+
+.views {
+  width: 100vw;
+  height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: row;
+}
+.views .viewport {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  align-items: center;
+  justify-content: center;
+}
+.views .viewport .canvas {
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  background: #2e2e2e;
+  border-radius: 10px;
+}
+.views .viewport .canvas .topresize {
+  width: 100%;
+  height: 20px;
+  background-color: #2e2e2e;
+  cursor: ns-resize;
+  transition: 0.4s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.views .viewport .canvas .topresize:hover {
+  background: #444444;
+}
+.views .viewport .canvas .middle {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: calc(100% - 10px);
+}
+.views .viewport .canvas .middle .leftresize {
+  width: 20px;
+  height: 100%;
+  background-color: #2e2e2e;
+  cursor: ew-resize;
+  transition: 0.4s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.views .viewport .canvas .middle .leftresize:hover {
+  background: #444444;
+}
+.views .viewport .canvas .middle .content {
+  width: calc(100% - 10px);
+  height: 100%;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+.views .viewport .canvas .middle .rightresize {
+  width: 20px;
+  height: 100%;
+  background-color: #2e2e2e;
+  cursor: ew-resize;
+  transition: 0.4s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.views .viewport .canvas .middle .rightresize:hover {
+  background: #444444;
+}
+.views .viewport .canvas .bottomresize {
+  width: 100%;
+  height: 20px;
+  background-color: #2e2e2e;
+  cursor: ns-resize;
+  transition: 0.4s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.views .viewport .canvas .bottomresize:hover {
+  background: #444444;
+}
+.views .settings {
+  width: 20%;
+  height: 100%;
+  background-color: #0c0c0c;
+  padding-inline: 10px;
+  border-left: 1px solid rgb(37, 37, 37);
+  padding-top: 10px;
+}
+.views .settings .positioning {
+  width: 100%;
+  background: black;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(59, 59, 59);
+  border-radius: 0px;
+}
+.views .settings .positioning .header {
+  width: 100%;
+  height: 30px;
+  background-color: #181818;
+}
+.views .settings .positioning .header h1 {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  margin-left: 10px;
+  line-height: 30px;
+}
+.views .settings .positioning .nobes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-block: 20px;
+  gap: 10px;
+}
+.views .settings .positioning .nobes h3 {
+  color: rgb(109, 109, 109);
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  align-self: flex-start;
+  margin-left: calc(20% - 25px);
+  letter-spacing: 1px;
+}
+.views .settings .positioning .nobes select {
+  width: 80%;
+  height: 30px;
+  background-color: transparent;
+  border: 1px solid #414141;
+  color: white;
+  border-radius: 6px;
+  font-family: "poppins";
+  outline: none;
+  transition: 0.2s ease-in-out;
+  letter-spacing: 1px;
+  padding-left: 10px;
+}
+.views .settings .positioning .nobes select:focus {
+  background: #2b2b2b;
+  border: 1px solid transparent;
+}
+.views .settings .positioning .nobes select option {
+  color: rgb(255, 255, 255);
+  background: black;
+  padding-left: 10px;
+  font-family: "poppins";
+}
+.views .settings .positioning .nobes .align-items {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 30px;
+  width: 80%;
+  background: black;
+  margin-left: 5px;
+}
+.views .settings .positioning .nobes .align-items .checked {
+  background-color: rgb(150, 62, 231);
+}
+.views .settings .positioning .nobes .align-items .checked:hover {
+  background-color: rgb(94, 39, 145);
+}
+.views .settings .positioning .nobes .align-items button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  border-radius: 4px;
+  border: 1px solid rgb(61, 61, 61);
+}
+.views .settings .positioning .nobes .align-items button:hover {
+  background: #242424;
+}
+.views .settings .positioning .nobes .align-items button img {
+  width: 20px;
+  height: 20px;
+}
+.views .settings .positioning .nobes .justify-items {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 30px;
+  width: 80%;
+  background: black;
+  margin-left: 5px;
+}
+.views .settings .positioning .nobes .justify-items .checked {
+  background-color: rgb(150, 62, 231);
+}
+.views .settings .positioning .nobes .justify-items .checked:hover {
+  background-color: rgb(94, 39, 145);
+}
+.views .settings .positioning .nobes .justify-items button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  border-radius: 4px;
+  border: 1px solid rgb(61, 61, 61);
+}
+.views .settings .positioning .nobes .justify-items button:hover {
+  background: #242424;
+}
+.views .settings .positioning .nobes .justify-items button img {
+  width: 20px;
+  height: 20px;
+}
+.views .settings .positioning .nobes div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 15px;
+  gap: 8px;
+}
+.views .settings .positioning .nobes div div h4 {
+  color: rgb(107, 107, 107);
+  font-family: "poppins", sans-serif;
+  font-size: 13px;
+}
+.views .settings .positioning .nobes div div input {
+  width: calc(50% - 55px);
+  height: 25px;
+  border: 1px solid #414141;
+  background-color: transparent;
+  color: white;
+  font-family: "poppins";
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  padding-left: 35px;
+  letter-spacing: 1px;
+  outline: none;
+  margin-left: -25px;
+  transition: 0.2s ease-in-out;
+}
+.views .settings .positioning .nobes div div input:focus {
+  border-color: #707070;
+}
+.views .settings .positioning .nobes div div .h-txt {
+  margin-left: 10px;
+}
+.views .settings .positioning .nobes div div .y-txt {
+  margin-left: 10px;
+}/*# sourceMappingURL=main.css.map */

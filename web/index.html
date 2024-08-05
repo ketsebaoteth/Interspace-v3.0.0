@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Interspace</title>
+        <link rel="stylesheet" href="./styles/main.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div class="toolbar">
+            <button>File</button>
+            <button>Edit</button>
+            <button>View</button>
+            <button>Window</button>
+            <button>Settings</button>
+            <button>Help</button>
+        </div>
+        <div class="tools"></div>
+        <div class="views">
+            <div class="viewport">
+                <div class="canvas">
+                    <div class="topresize"><img src="./icons/horizontal handles.svg" alt=""></div>
+                    <div class="middle">
+                        <div class="leftresize"><img src="./icons/vertical handles.svg" alt=""></div>
+                        <div class="content"></div>
+                        <div class="rightresize"><img src="./icons/vertical handles.svg" alt=""></div>
+                    </div>
+                    <div class="bottomresize"><img src="./icons/horizontal handles.svg" alt=""></div>
+                </div>
+            </div>
+            <div class="settings">
+                <div class="positioning">
+                    <div class="header">
+                        <h1>Positioning</h1>
+                    </div>
+                    <div class="nobes">
+                        <h3>positioning</h3>
+                        <select name="this" id="">
+                            <option value="absolute" selected>absolute</option>
+                            <option value="relative">relative</option>
+                            <option value="fixed">fixed</option>
+                            <option value="sticky">sticky</option>
+                        </select>
+                        <h3>Sizing</h3>
+                        <div class="xywh">
+                            <div>
+                                <h4>X</h4>
+                                <input type="text" class="x-loc" value="0">
+                                <h4 class="y-txt">Y</h4>
+                                <input type="text" class="y-loc" value="0">    
+                            </div>
+                            <div>
+                                <h4>W</h4>
+                                <input type="text" class="width" value="0">
+                                <h4 class="h-txt">H</h4>
+                                <input type="text" class="height" value="0" >
+                            </div>
+                        </div>
+                        <h3>Display Options</h3>
+                        <select name="" id="">
+                            <option value="block" selected>block</option>
+                            <option value="flex">flex</option>
+                            <option value="grid">grid</option>
+                            <option value="inline">inline</option>
+                            <option value="inline-block">inline-block</option>
+                            <option value="inline-flex">inline-flex</option>
+                            <option value="inline-grid">inline-grid</option>
+                            <option value="inline-table">inline-table</option>
+                            <option value="list-item">list-item</option>
+                            <option value="run-in">run-in</option>
+                        </select>
+                        <select name="" id="">
+                            <option value="row" selected>Row</option>
+                            <option value="column">Column</option>
+                            <option value="row-reverse">Row Reverse</option>
+                            <option value="column-reverse">Column Reverse</option>            
+                        </select>
+                        <h3>Align Items</h3>
+                        <div class="align-items">
+                            <button class="left checked"><img src="./icons/left align.svg" alt=""></button>
+                            <button class="center"><img src="./icons/center align.svg" alt=""></button>
+                            <button class="right"><img src="./icons/right align.svg" alt=""></button>
+                        </div>
+                        <h3>Justify Content</h3>
+                        <div class="justify-items">
+                            <button class="top"><img src="./icons/top align.svg" alt=""></button>
+                            <button class="center checked"><img src="./icons/middle align.svg" alt=""></button>
+                            <button class="bottom"><img src="./icons/bottom align.svg" alt=""></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
